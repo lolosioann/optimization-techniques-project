@@ -1,0 +1,52 @@
+\documentclass[a4paper, 12pt, titlepage]{report}
+
+% Package Imports
+\usepackage{xltxtra} % For inserting images and UTF-8 support
+\usepackage{xgreek} % For handling Greek text
+\usepackage{enumitem} % For customizing lists
+\usepackage{biblatex} % For bibliography
+\usepackage{array} % For improving the tabular package
+\usepackage{mathtools} % For prettier math equations
+\usepackage{unicode-math}
+\usepackage{algorithm} % For algorithms
+\usepackage{algpseudocode} % for algorithms in pseudocode
+\usepackage{tikz-cd} % For diagrams. Also use https://q.uiver.app/
+\usepackage{wrapfig} % For wrapping text around figures
+\usepackage{subfig} % For side-by-side images
+\usepackage{geometry} % For setting margins
+\usepackage{titlesec} % For getting rid of "Chapter" headers
+\usepackage{lipsum} % For lorem ipsum
+\usepackage{mymacros} % For custom macros
+\usepackage{hyperref} % For hyperlinks
+    \hypersetup{ 
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black
+    }
+\usepackage{cleveref} % For better referencing 
+
+% Set font Choices
+\setmainfont[Mapping=tex-text, Ligatures=Common]{FreeSerif}
+\setsansfont[Scale=MatchLowercase, Mapping=tex-text]{FreeSans}
+\setmonofont[Scale=MatchLowercase]{FreeMono}
+
+% Set bibliography file
+\addbibresource{bibliography.bib}
+
+\setlength{\parindent}{0pt} % Stop paragraphs from begining indented
+
+% from the titlesec package: gets rid of "Chapter" headers
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{}{0pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+% Document Structure
+\begin{document}
+    \include{Sections/cover}
+    \tableofcontents
+    \include{Sections/introduction}
+    \include{Body/chapter1}
+    \include{Body/chapter2}
+    \include{Body/chapter3}
+    \include{Body/chapter4}
+    \printbibliography
+\end{document}
