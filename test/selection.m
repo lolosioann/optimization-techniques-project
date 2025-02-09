@@ -1,5 +1,5 @@
 function [newpopulation, index] = selection(population, fitness)
-    [size_population, size_gene] = size(population);
+    [~, size_gene] = size(population);
     fitness_sum = sum(fitness);
     fit_percent = fitness / fitness_sum;
     newpopulation = zeros(100, size_gene);
